@@ -30,18 +30,20 @@ function Login() {
         }, 400)
       }}
     >
-      <div className="min-h-screen flex items-center justify-center bg-gray-800 py-4 px-4">
+      <div className="flex items-center justify-center py-4 px-4">
         <div className="max-w-md w-full">
-          <img className="mx-auto h-auto w-auto" src={logo} alt="NDRA" />
+          <div className="bg-gray-400 rounded-md">
+            <img className="mx-auto h-auto w-auto" src={logo} alt="NDRA" />
+          </div>
           <div>
-            <h2 className="mt-2 text-center text-2xl leading-9 font-extrabold text-gray-400">
+            <h2 className="mt-2 text-center text-2xl leading-9 font-extrabold text-gray-600">
               NDRA - Returnees Database
             </h2>
             <p className="m-4 text-center text-xl leading-5 text-gray-600 max-w">
               Please Login
             </p>
           </div>
-          <div className="flex justify-center bg-gray-100 py-6 max-w-xs m-auto rounded-md">
+          <div className="flex justify-center bg-white py-6 max-w-xs m-auto rounded-md">
             <Form>
               <div className="rounded-md shadow-sm">
                 <div>
