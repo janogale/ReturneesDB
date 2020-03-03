@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function SideNav() {
   return (
     <div className="flex flex-col justify-start bg-gray-800 mt-12 mx-auto w-16">
-      <a
-        href="#"
+      <Link
+        to="/register"
         className="flex flex-col items-center mb-4 py-2 text-xs font-medium text-white  hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
       >
         <svg
@@ -21,7 +22,7 @@ function SideNav() {
           ></path>
         </svg>
         <span> Add New</span>
-      </a>
+      </Link>
       <a
         href="#"
         className="flex flex-col items-center mb-4 py-2 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
@@ -41,8 +42,8 @@ function SideNav() {
         </svg>
         <span>Search</span>
       </a>
-      <a
-        href="#"
+      <Link
+        to="/list"
         className="flex flex-col items-center mb-4 py-2 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
       >
         <svg
@@ -59,7 +60,7 @@ function SideNav() {
           ></path>
         </svg>
         <span>View All</span>
-      </a>
+      </Link>
       <a
         href="#"
         className="flex flex-col items-center mb-4 py-2 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
