@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div className="app bg-gray-200">
-        <header className="flex justify-around items-center">
+        <header className="flex justify-around items-center bg-indigo-900">
           <Header />
         </header>
         <aside className="">

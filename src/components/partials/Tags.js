@@ -29,10 +29,8 @@ export const MyDiv = ({
 
 // DivInput
 
-export const DivInput = ({ extra = '', width = 'w-4/5', children }) => {
-  return (
-    <div className={`sm:border-l pl-4 ${width} mx-4 ${extra}`}>{children}</div>
-  )
+export const DivInput = ({ extra = '', width = 'w-11/12', children }) => {
+  return <div className={`pl-4 ${width} m-4 ${extra}`}>{children}</div>
 }
 
 // Submit Button

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { TableHead } from './partials/Tags'
 
 function ListView() {
@@ -54,12 +55,12 @@ function ListView() {
                   Owner
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                  <a
-                    href="#"
+                  <Link
+                    to="/certificate"
                     className="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
                   >
                     Certificate
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <tr>
@@ -99,12 +100,12 @@ function ListView() {
                   Owner
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
                   >
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <tr>
@@ -144,12 +145,12 @@ function ListView() {
                   Owner
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
                   >
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
               <tr>
@@ -189,12 +190,12 @@ function ListView() {
                   Owner
                 </td>
                 <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
-                  <a
-                    href="#"
+                  <Link
+                    to="/edit"
                     className="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
                   >
                     Edit
-                  </a>
+                  </Link>
                 </td>
               </tr>
             </tbody>

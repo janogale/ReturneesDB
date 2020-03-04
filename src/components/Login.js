@@ -3,7 +3,7 @@ import { Form, Formik } from 'formik'
 import * as Yup from 'yup'
 
 // components
-import { TextInput } from './Inputs'
+import { TextInput } from './partials/Inputs'
 
 // images
 import logo from '../assets/img/ndra-banner.png'

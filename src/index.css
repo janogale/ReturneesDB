@@ -23,7 +23,6 @@ body {
 header {
   grid-area: header;
   color: #fff;
-  background: #464775;
 }
 
 aside {

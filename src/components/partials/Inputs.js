@@ -38,7 +38,7 @@ const TextInputLabeled = props => {
         {label}
       </label>
       <input
-        className={`appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 ${extra ||
+        className={`appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 ${extra ||
           ''}`}
         {...field}
         {...props}
@@ -69,7 +69,7 @@ const TextAreaLabeled = props => {
       </label>
       <Field
         component="textarea"
-        className={`appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 ${extra ||
+        className={`appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 ${extra ||
           ''}`}
         {...field}
         {...props}
@@ -98,7 +98,7 @@ const SelectField = ({ label = '', name, extra = '', options = [] }) => {
         <Field
           component="select"
           name={name}
-          className={`block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 ${extra}`}
+          className={`block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 ${extra}`}
         >
           {options.map((value, index) => (
             <option key={index} value={value}>
@@ -135,7 +135,7 @@ const RadioBox = ({ label = '', name = '', options = [] }) => {
         <label key={index} className="md:w-2/3 block text-gray-500 font-bold">
           <Field
             name={name}
-            className="mr-2 leading-tight"
+            className="mr-2 leading-tight bg-white"
             type="radio"
             value={value}
           />
@@ -146,4 +146,38 @@ const RadioBox = ({ label = '', name = '', options = [] }) => {
   )
 }
 
-export { TextInput, TextInputLabeled, TextAreaLabeled, SelectField, RadioBox }
+// Radio Box
+
+const CheckBox = ({ label = '', name = '', options = [] }) => {
+  return (
+    <>
+      <label
+        className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
+        htmlFor="grid-zip"
+      >
+        {label}
+      </label>
+      {options.map((value, index) => (
+        <label key={index} className="md:w-2/3 block text-gray-500 font-bold">
+          <Field
+            name={name}
+            className="mr-2 leading-tight bg-white"
+            type="checkbox"
+            value={value}
+          />
+
+          <span className="text-sm">{value}</span>
+        </label>
+      ))}
+    </>
+  )
+}
+
+export {
+  TextInput,
+  TextInputLabeled,
+  TextAreaLabeled,
+  SelectField,
+  RadioBox,
+  CheckBox,
+}

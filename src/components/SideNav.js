@@ -23,8 +23,8 @@ function SideNav() {
         </svg>
         <span> Add New</span>
       </Link>
-      <a
-        href="#"
+      <Link
+        to="/search"
         className="flex flex-col items-center mb-4 py-2 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
       >
         <svg
@@ -41,7 +41,7 @@ function SideNav() {
           ></path>
         </svg>
         <span>Search</span>
-      </a>
+      </Link>
       <Link
         to="/list"
         className="flex flex-col items-center mb-4 py-2 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
@@ -61,8 +61,8 @@ function SideNav() {
         </svg>
         <span>View All</span>
       </Link>
-      <a
-        href="#"
+      <Link
+        to="/reports"
         className="flex flex-col items-center mb-4 py-2 text-xs font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
       >
         <svg
@@ -79,7 +79,7 @@ function SideNav() {
           ></path>
         </svg>
         <span>Reports</span>
-      </a>
+      </Link>
     </div>
   )
 }
