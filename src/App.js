@@ -6,6 +6,8 @@ import Login from './components/Login'
 import Header from './components/Header'
 import SideNav from './components/SideNav'
 import ListView from './components/ListView'
+import SearchView from './components/SearchView'
+import Reports from './components/Reports'
 
 //css
 import './assets/css/main.css'
@@ -22,8 +24,10 @@ function App() {
         </aside>
         <main>
           <Route path="/" exact component={Login} />
-          <Route path="/list" exact component={ListView} />
           <Route path="/register" exact component={Register} />
+          <Route path="/list" exact component={ListView} />
+          <Route path="/search" exact component={SearchView} />
+          <Route path="/reports" exact component={Reports} />
         </main>
       </div>
     </Router>

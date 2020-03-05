@@ -1,6 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { TableHead } from './partials/Tags'
+import { TableHead, TableTD } from './partials/Tags'
+
+// images
+import returnee1 from '../assets/img/returnee1.jpg'
+import returnee2 from '../assets/img/returnee2.jpg'
+
+// test DB
+
+import { DB } from './db'
 
 function ListView() {
   return (
@@ -11,193 +19,68 @@ function ListView() {
             <thead>
               <tr>
                 <TableHead>Name</TableHead>
-                <TableHead>Title</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Role</TableHead>
+                <TableHead>Current Location</TableHead>
+                <TableHead>Origin</TableHead>
+                <TableHead>Destination</TableHead>
+                <TableHead>Returned Date</TableHead>
                 <TableHead></TableHead>
               </tr>
             </thead>
             <tbody className="bg-white">
-              <tr>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10">
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div className="ml-4">
-                      <div className="text-sm leading-5 font-medium text-gray-900">
-                        Mukhtar Mahamed
+              {DB.map((person, index) => (
+                <tr key={index} className="hover:bg-gray-200">
+                  <TableTD>
+                    <div className="flex items-center cursor-pointer">
+                      <div className="flex-shrink-0 h-10 w-10">
+                        <img
+                          className="h-10 w-10 rounded-full"
+                          src={index % 2 ? returnee2 : returnee1}
+                          alt="returnee"
+                        />
                       </div>
-                      <div className="text-sm leading-5 text-gray-500">
-                        #54038743
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div className="text-sm leading-5 text-gray-900">
-                    Principle
-                  </div>
-                  <div className="text-sm leading-5 text-gray-500">
-                    8 children
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                    Yemen
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
-                  Owner
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                  <Link
-                    to="/certificate"
-                    className="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
-                  >
-                    Certificate
-                  </Link>
-                </td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10">
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1532910404247-7ee9488d7292?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div className="ml-4">
-                      <div className="text-sm leading-5 font-medium text-gray-900">
-                        Bernard Lane
-                      </div>
-                      <div className="text-sm leading-5 text-gray-500">
-                        bernardlane@example.com
+                      <div className="ml-4">
+                        <div className="text-sm leading-5 font-medium text-gray-900">
+                          {`${person.firstName} ${person.lastName}`}
+                        </div>
+                        <div className="text-sm leading-5 text-gray-500">
+                          #54038743
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div className="text-sm leading-5 text-gray-900">
-                    Director
-                  </div>
-                  <div className="text-sm leading-5 text-gray-500">
-                    Human Resources
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                    Active
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
-                  Owner
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                  <Link
-                    to="#"
-                    className="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
-                  >
-                    Edit
-                  </Link>
-                </td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10">
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1505503693641-1926193e8d57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
+                  </TableTD>
+                  <TableTD>
+                    <div className="text-sm leading-5 text-gray-900">
+                      {person.CurrentTown}
                     </div>
-                    <div className="ml-4">
-                      <div className="text-sm leading-5 font-medium text-gray-900">
-                        Bernard Lane
-                      </div>
-                      <div className="text-sm leading-5 text-gray-500">
-                        bernardlane@example.com
-                      </div>
+                    <div className="text-sm leading-5 text-gray-500">
+                      {person.currentDistrict}
                     </div>
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <div className="text-sm leading-5 text-gray-900">
-                    Director
-                  </div>
-                  <div className="text-sm leading-5 text-gray-500">
-                    Human Resources
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                  <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
-                    Inactive
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
-                  Owner
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                  <Link
-                    to="#"
-                    className="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
-                  >
-                    Edit
-                  </Link>
-                </td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-no-wrap">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10">
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
+                  </TableTD>
+                  <TableTD>
+                    <div className="text-sm leading-5 text-gray-900">
+                      {person.hostCountry}
                     </div>
-                    <div className="ml-4">
-                      <div className="text-sm leading-5 font-medium text-gray-900">
-                        Bernard Lane
-                      </div>
-                      <div className="text-sm leading-5 text-gray-500">
-                        bernardlane@example.com
-                      </div>
+                    <div className="text-sm leading-5 text-gray-500">San`a</div>
+                  </TableTD>
+                  <TableTD>
+                    <div className="text-sm leading-5 text-gray-900">
+                      {person.destinationRegion}
                     </div>
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap">
-                  <div className="text-sm leading-5 text-gray-900">
-                    Director
-                  </div>
-                  <div className="text-sm leading-5 text-gray-500">
-                    Human Resources
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap">
-                  <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
-                    Inactive
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                  Owner
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
-                  <Link
-                    to="/edit"
-                    className="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
-                  >
-                    Edit
-                  </Link>
-                </td>
-              </tr>
+                    <div className="text-sm leading-5 text-gray-500">
+                      {person.destinationTown}
+                    </div>
+                  </TableTD>
+                  <TableTD>12/05/2018</TableTD>
+                  <TableTD>
+                    <Link
+                      to="/certificate"
+                      className="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
+                    >
+                      Certificate
+                    </Link>
+                  </TableTD>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

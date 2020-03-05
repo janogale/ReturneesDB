@@ -10,7 +10,6 @@ import PartThree from './partials/FormPart3'
 
 // input fields for Formik
 import initialValues from './partials/InitialValues'
-console.log(initialValues)
 
 // RegisterForm
 function Register() {
