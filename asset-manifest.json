@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ReturneesDB/static/css/main.b9c730e2.chunk.css",
+    "main.js": "/ReturneesDB/static/js/main.fbd07a22.chunk.js",
+    "main.js.map": "/ReturneesDB/static/js/main.fbd07a22.chunk.js.map",
+    "runtime-main.js": "/ReturneesDB/static/js/runtime-main.9751ec99.js",
+    "runtime-main.js.map": "/ReturneesDB/static/js/runtime-main.9751ec99.js.map",
+    "static/js/2.4a6901de.chunk.js": "/ReturneesDB/static/js/2.4a6901de.chunk.js",
+    "static/js/2.4a6901de.chunk.js.map": "/ReturneesDB/static/js/2.4a6901de.chunk.js.map",
+    "index.html": "/ReturneesDB/index.html",
+    "precache-manifest.197ff0f1a21435f2ae165cf46c90a545.js": "/ReturneesDB/precache-manifest.197ff0f1a21435f2ae165cf46c90a545.js",
+    "service-worker.js": "/ReturneesDB/service-worker.js",
+    "static/css/main.b9c730e2.chunk.css.map": "/ReturneesDB/static/css/main.b9c730e2.chunk.css.map",
+    "static/js/2.4a6901de.chunk.js.LICENSE.txt": "/ReturneesDB/static/js/2.4a6901de.chunk.js.LICENSE.txt",
+    "static/media/iom.png": "/ReturneesDB/static/media/iom.a1c21fd3.png",
+    "static/media/logo.png": "/ReturneesDB/static/media/logo.b3d33b74.png",
+    "static/media/ndra-banner.png": "/ReturneesDB/static/media/ndra-banner.7d557f34.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9751ec99.js",
+    "static/js/2.4a6901de.chunk.js",
+    "static/css/main.b9c730e2.chunk.css",
+    "static/js/main.fbd07a22.chunk.js"
+  ]
+}
