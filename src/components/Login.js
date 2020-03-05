@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Form, Formik } from 'formik'
 import * as Yup from 'yup'
 
 // components
 import { TextInput } from './partials/Inputs'
+
+import { LoginContext } from '../context/LoginContext'
 
 // images
 import logo from '../assets/img/ndra-banner.png'
@@ -11,6 +13,21 @@ import ksrelief from '../assets/img/ksrelief.png'
 import iom from '../assets/img/iom.png'
 
 function Login() {
+  const user = useContext(LoginContext)
+
+  const validateLogin = (username, password) => {
+    const userInfo = {
+      user: 'ndratest',
+      pass: '1234',
+    }
+
+    if (username == userInfo.user && password == userInfo.pass) {
+      return true
+    }
+
+    return false
+  }
+
   return (
     <Formik
       initialValues={{
@@ -25,13 +42,14 @@ function Login() {
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
+          validateLogin(values.userName, values.password)
           alert(JSON.stringify(values, null, 2))
           setSubmitting(false)
         }, 400)
       }}
     >
-      <div className="flex items-center justify-center py-4 px-4">
-        <div className="max-w-md w-full">
+      <div className="flex items-center justify-center py-4 px-4 md:pt-12">
+        <div className="max-w-xl w-full">
           <div className="bg-gray-400 rounded-md">
             <img className="mx-auto h-auto w-auto" src={logo} alt="NDRA" />
           </div>
@@ -84,6 +102,7 @@ function Login() {
 
               <div className="mt-6">
                 <button
+                  onClick={() => user.setLogin(true)}
                   type="submit"
                   className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-400 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out"
                 >

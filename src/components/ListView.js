@@ -12,7 +12,7 @@ import { DB } from './db'
 
 function ListView() {
   return (
-    <div className="flex flex-col mx-4">
+    <div className="flex flex-col mx-4 mt-12">
       <div className="overflow-x-auto">
         <div className="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
           <table className="min-w-full">
