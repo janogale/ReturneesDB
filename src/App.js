@@ -38,6 +38,7 @@ function App() {
           </aside>
           <main>
             <Route path="/" exact component={Home} />
+            <Route path="/ReturneesDB" exact component={Home} />
             <Route path="/register" exact component={Register} />
             <Route path="/list" exact component={ListView} />
             <Route path="/search" exact component={SearchView} />
