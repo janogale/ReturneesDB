@@ -2,17 +2,20 @@ import React from 'react'
 
 function SearchWidget({ handleSearch }) {
   return (
-    <div className="relative text-gray-900 w-2/4 text-xl font-semibold">
+    <div className="relative text-gray-900 w-2/4 text-sm md:text-xl font-semibold">
       <input
         type="search"
         name="serch"
         onChange={e => handleSearch(e)}
         placeholder="Search Returnees"
-        className="bg-white w-full h-16 px-10 pr-20 rounded-full focus:outline-none"
+        className="bg-white w-full h-10 md:h-16  px-10 md:pr-20 rounded-full focus:outline-none"
       />
-      <button type="submit" className="absolute right-0 top-0 mt-4 mr-4">
+      <button
+        type="submit"
+        className="absolute right-0 top-0 mt-3 md:mt-4 mr-4"
+      >
         <svg
-          className="h-8 w-8 fill-current"
+          className="h-4 w-4 md:h-8 md:w-8 fill-current"
           version="1.1"
           id="Capa_1"
           x="0px"

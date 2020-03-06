@@ -51,7 +51,7 @@ function SearcView() {
 
   return (
     <>
-      <div className="flex justify-center m-8">
+      <div className="flex justify-center m-4 md:m-8">
         <SearchWidget handleSearch={handleSearch} />
       </div>
       <div className="flex flex-col mx-4">
