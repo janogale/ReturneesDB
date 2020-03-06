@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Form, Formik } from 'formik'
 import * as Yup from 'yup'
 
@@ -14,6 +14,7 @@ import iom from '../assets/img/iom.png'
 
 function Login() {
   const user = useContext(LoginContext)
+  const [alert, setAlert] = useState(false)
 
   const validateLogin = (username, password) => {
     const userInfo = {
@@ -21,7 +22,7 @@ function Login() {
       pass: '1234',
     }
 
-    if (username == userInfo.user && password == userInfo.pass) {
+    if (username === userInfo.user && password === userInfo.pass) {
       return true
     }
 
@@ -42,8 +43,11 @@ function Login() {
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          validateLogin(values.userName, values.password)
-          alert(JSON.stringify(values, null, 2))
+          if (validateLogin(values.userName, values.password)) {
+            user.setLogin(true)
+          } else {
+            setAlert(true)
+          }
           setSubmitting(false)
         }, 400)
       }}
@@ -57,9 +61,15 @@ function Login() {
             <h2 className="mt-2 text-center text-2xl leading-9 font-extrabold text-gray-600">
               NDRA - Returnees Database
             </h2>
-            <p className="m-4 text-center text-xl leading-5 text-gray-600 max-w">
-              Please Login
-            </p>
+            {!alert ? (
+              <p className="m-4 text-center text-xl leading-5 text-gray-600 max-w">
+                Please Login
+              </p>
+            ) : (
+              <div className="m-4 text-center text-sm leading-5 text-red-600 max-w">
+                Incorrect Username or Password
+              </div>
+            )}
           </div>
           <div className="flex justify-center bg-white py-6 max-w-xs m-auto rounded-md">
             <Form>
@@ -102,7 +112,6 @@ function Login() {
 
               <div className="mt-6">
                 <button
-                  onClick={() => user.setLogin(true)}
                   type="submit"
                   className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-400 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out"
                 >
