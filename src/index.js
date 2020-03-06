@@ -9,7 +9,7 @@ import { LoginProvider } from './context/LoginContext'
 import * as serviceWorker from './serviceWorker'
 
 function MyApp() {
-  const [isLogin, setLogin] = useState(false)
+  const [isLogin, setLogin] = useState(true)
   return (
     <LoginProvider value={{ isLoggedIn: isLogin, setLogin }}>
       <App />

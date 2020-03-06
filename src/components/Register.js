@@ -25,7 +25,7 @@ function Register() {
         }, 400)
       }}
     >
-      <div className="m-6 mb-20 px-2 bg-gray-100">
+      <div className="m-6 mt-12 mb-20 px-2 bg-white">
         <h1 className="py-4 pl-8 mb-4 text-lg font-bold">
           Register New Person
         </h1>

@@ -10,9 +10,9 @@ function Collapsible({ children, title, isOpen = false }) {
       <div className="border-l-2 border-transparent">
         <header
           onClick={() => setHide(!hide)}
-          className="flex justify-between bg-gray-200 items-center p-3 pl-8 pr-8  cursor-pointer select-none"
+          className="flex justify-between bg-gray-300 items-center p-3 pl-8 pr-8  cursor-pointer select-none"
         >
-          <span className="font-thin text-xl text-gray-700 font-semibold">
+          <span className="font-thin text-xl  text-gray-700 font-semibold">
             {title}
           </span>
           <div className=" w-7 h-7 flex items-center justify-center text-green-400">
