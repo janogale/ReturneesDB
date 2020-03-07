@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8acd5b1e8ca5502f7a6b15384163ea9d",
+    "revision": "f665fb0b0e27949627fa793c314564c2",
     "url": "/ReturneesDB/index.html"
   },
   {
-    "revision": "165efcfc488bcd0c3553",
+    "revision": "c7446ba34d429ab70b70",
     "url": "/ReturneesDB/static/css/main.a596128b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReturneesDB/static/js/2.2c59bb8c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "165efcfc488bcd0c3553",
-    "url": "/ReturneesDB/static/js/main.6f452610.chunk.js"
+    "revision": "c7446ba34d429ab70b70",
+    "url": "/ReturneesDB/static/js/main.003267f7.chunk.js"
   },
   {
     "revision": "6872de42c40108e8c222",
