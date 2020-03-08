@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Camera from 'react-html5-camera-photo'
+import 'react-html5-camera-photo/build/css/index.css'
 
 // Components
 
@@ -13,13 +15,43 @@ import Collapsible from './Collapsible'
 
 import { FlexDiv, MyDiv, DivInput } from './Tags'
 
+// Images
+import placeholder from '../../assets/img/placeholder.jpg'
+
 function RegisterPartOne() {
+  const [isReadyCamera, setIsReadyCamera] = useState(false)
+  const [dataUri, setDataUri] = useState('')
+
+  function handleTakePhotoAnimationDone(dataUri) {
+    setIsReadyCamera(false)
+    setDataUri(dataUri)
+  }
+
   return (
     <>
       {/* Basic Information */}
-      <Collapsible title="Basic Information" isOpen={true}>
+      <Collapsible title="Basic Information" isOpen={false}>
+        {/* Capture Photo */}
+        {isReadyCamera && (
+          <div className="absolute inset-0 z-40">
+            <Camera onTakePhotoAnimationDone={handleTakePhotoAnimationDone} />
+          </div>
+        )}
         <FlexDiv extra="mt-4">
-          <DivInput>
+          <div className="sm:mr-8 pl-2 pb-4">
+            <div
+              onClick={() => setIsReadyCamera(true)}
+              className="h-20 w-20 sm:w-48 sm:h-32 border  flex justify-center items-center overflow-hidden cursor-pointer"
+            >
+              <img
+                className="object-cover w-full"
+                src={dataUri || placeholder}
+                alt="placeholder"
+              />
+            </div>
+            <div className="mt-4 text-center">Take Photo</div>
+          </div>
+          <DivInput extra="sm:border-l">
             <div className="flex flex-wrap  mb-6 w-full">
               <MyDiv>
                 <TextInputLabeled
@@ -85,9 +117,6 @@ function RegisterPartOne() {
       {/* Contact Details */}
       <Collapsible title="Contact Details">
         <FlexDiv extra="mt-4">
-          <div className="sm:mr-12 pl-4 pb-4 font-semibold">
-            Contact Details
-          </div>
           <DivInput>
             <div className="flex flex-wrap  mb-2">
               <MyDiv width="md:w-1/4">

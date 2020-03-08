@@ -15,7 +15,9 @@ function Header() {
         <div className="ml-3 text-xl font-extrabold">NDRA</div>
       </Link>
 
-      <div className="hidden sm:block mr-auto uppercase">Returnee Database</div>
+      <div className="hidden sm:block mr-auto uppercase font-bold">
+        Returnees Database
+      </div>
       <div className="mr-8">
         <button
           onClick={() => user.setLogin(false)}

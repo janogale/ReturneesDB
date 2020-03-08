@@ -6,7 +6,8 @@ import BarChart from './charts/BarChart'
 import DoughnutChart from './charts/DoughnutChart'
 
 // images
-// import home from '../assets/img/home.jpg'
+import ksrelief from '../assets/img/ksrelief.png'
+import iom from '../assets/img/iom.png'
 
 function Home() {
   return (
@@ -152,6 +153,18 @@ function Home() {
           <LineChart />
           <BarChart />
           <DoughnutChart />
+        </div>
+      </div>
+      <hr className="border-b-1 border-gray-400 my-8 mx-4" />
+
+      <div className="m-8 flex justify-around text-gray-600 text-center text-xs pt-2">
+        <div>
+          Funded by:
+          <img className="w-24 mt-1 m-auto" src={ksrelief} alt="NDRA" />
+        </div>
+        <div>
+          Implemented by:
+          <img className="w-16 mt-1 m-auto" src={iom} alt="NDRA" />
         </div>
       </div>
     </div>
